@@ -24,3 +24,47 @@ if (johnAge < markAge) {
   console.log('John is older than Mark');
 }
 console.log(typeof johnAge);
+
+
+let marksWeight, marksHeight, johnsHeight, johnsWeight;
+marksWeight = 101;
+marksHeight = 1.8;
+johnsHeight = 1.6;
+johnsWeight = 63;
+
+const marksBMI = marksWeight / (marksHeight * marksHeight);
+const johnsBMI = johnsWeight / (johnsHeight * johnsHeight);
+
+console.log(marksBMI);
+console.log(johnsBMI);
+
+if(marksBMI > johnsBMI) {
+  console.log(true);
+}else {
+  console.log(false);
+}
+
+//const markHigherBMI = marksBMI > johnsBMI;
+//console.log('Is Mark\'s BMI higher than John\'s?' + ' ' + markHigherBMI);
+
+const relationshipStatus = 'single';
+
+if(relationshipStatus === 'marriage') {
+  console.log(firstName + ' is married!');
+}else {
+  console.log(firstName + ' is not married');
+}
+
+//Boolean Logic
+
+const name = 'John';
+const johnsAge = 16;
+
+
+if (johnsAge < 13) {
+  console.log(firstName + ' is a boy');
+} else if(johnsAge >= 13 && johnsAge <= 20) {
+  console.log(firstName + ' is a teenager');
+} else {
+  console.log(firstName + ' is a man')
+}
