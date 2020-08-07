@@ -57,14 +57,16 @@ if(relationshipStatus === 'marriage') {
 
 //Boolean Logic
 
-const name = 'John';
-const johnsAge = 16;
-
+const johnsAge = 22;
 
 if (johnsAge < 13) {
   console.log(firstName + ' is a boy');
-} else if(johnsAge >= 13 && johnsAge <= 20) {
+} else if(johnsAge >= 13 && johnsAge < 20) {
   console.log(firstName + ' is a teenager');
+} else if(johnsAge >= 20 && johnsAge <= 30) {
+  console.log(firstName + ' is a young man');
 } else {
-  console.log(firstName + ' is a man')
+  console.log(firstName + ' is a man');
 }
+
+johnsAge >= 18 ? console.log(firstName + ' Drinks Beer');
