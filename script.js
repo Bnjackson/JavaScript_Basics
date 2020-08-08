@@ -69,4 +69,5 @@ if (johnsAge < 13) {
   console.log(firstName + ' is a man');
 }
 
-johnsAge >= 18 ? console.log(firstName + ' Drinks Beer');
+johnsAge >= 18 ? console.log(firstName + ' Drinks Beer')
+: console.log(firstName ' Drinks Juice');
