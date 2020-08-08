@@ -70,4 +70,27 @@ if (johnsAge < 13) {
 }
 
 johnsAge >= 18 ? console.log(firstName + ' Drinks Beer')
-: console.log(firstName ' Drinks Juice');
+:console.log(firstName + ' Drinks Juice');
+
+switch(true) {
+  case johnsAge < 13:
+  console.log(firstName + ' is a boy');
+  break;
+  case johnsAge >= 13 && johnsAge < 20:
+  console.log(firstName + ' is a teenager');
+  break;
+  case johnsAge >= 20 && johnsAge <= 30:
+  console.log(firstName + ' is a young man');
+  default:
+  console.log(firstName + ' is a man');
+}
+
+
+
+var height;
+
+if (height) {
+  console.log('Variable is defined');
+}else {
+  console.log('Variable has not been defined');
+}
