@@ -86,11 +86,82 @@ switch(true) {
 }
 
 
+const x = '5';
+const y = 5;
 
-var height;
-
-if (height) {
-  console.log('Variable is defined');
+if(x == y) {
+  console.log('im a gay');
 }else {
-  console.log('Variable has not been defined');
+  console.log('im am not gay');
 }
+
+const johnsScore = (140 + 120 + 100) / 3;
+const mikesScore = (140 + 120 + 100) / 3;
+const marysScore = (140 + 120 + 100) / 3;
+
+if (johnsScore > mikesScore && johnsScore > marysScore) {
+    console.log('Johns team won scoring ' + johnsScore + '. Mikes team lost only scoring ' + mikesScore + '.' + ' Marys team lost scoring ' + marysScore + '.');
+} else if (mikesScore > johnsScore && mikesScore > marysScore) {
+    console.log('Mikes team won scoring ' + mikesScore + '. Johns team lost only scoring ' + johnsScore + '.' + ' Marys team lost scoring ' + marysScore + '.');
+} else if (marysScore > johnsScore && marysScore > mikesScore) {
+    ('Mikes team lost scoring ' + mikesScore + '. Johns team lost only scoring ' + johnsScore + '.' + ' Marys team won scoring ' + marysScore + '.');
+} else {
+    console.log('Johns team drew scoring ' + johnsScore + '. Mikes team drew scoring ' + mikesScore + '.' + ' Marys team drew scoring ' + marysScore + '.');
+}
+
+/*if (johnsScore > mikesScore) {
+  console.log('Johns team won scoring ' + johnsScore + '. Mikes team lost only scoring ' + mikesScore + '.' );
+}else if (mikesScore > johnsScore) {
+  console.log('Mikes team won scoring ' + mikesScore + '. Johns team lost only scoring ' + johnsScore + '.' );
+}else {
+    console.log('Johns team drew scoring ' + johnsScore + '. Mikes team drew scoring ' + mikesScore + '.' );
+}
+*/
+
+function calculateAge(birthYear) {
+  return 2020 - birthYear;
+}
+
+const ageBen = calculateAge(1995);
+const ageAdam = calculateAge(1990);
+const agePaul = calculateAge(1984);
+
+console.log(ageBen, ageAdam, agePaul);
+
+function yearsToRetirement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  }else {
+    console.log(firstName + ' has already retired.');
+  }
+}
+
+yearsToRetirement(1995, 'john');
+yearsToRetirement(1962, 'mark');
+yearsToRetirement(1935, 'matt');
+
+let whatDoYouDo = function(job, firstName) { //Function Expression
+
+}
+
+function whatIsYourJob(job, firstName) { //Function Declaration
+  switch(job) {
+    case 'teacher':
+    return firstName + ' is a teacher.';
+    case 'fireman':
+    return firstName + ' is a fireman.';
+    case 'nurse':
+    return firstName + ' is a nurse.';
+    case 'police':
+    return firstName + ' is a policeman.';
+    case 'driver':
+    return firstName + ' is a driver.';
+    default:
+    return firstName + ' is unemployed.'
+  }
+}
+console.log(whatIsYourJob('dock worker', 'John'));
+console.log(whatIsYourJob('driver', 'Sarah'));
+console.log(whatIsYourJob('teacher', 'mike'));
