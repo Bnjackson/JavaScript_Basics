@@ -219,8 +219,6 @@ function tipCalculator(bill) {
     return percentage * bill;
 }
 
-console.log(tipCalculator(100));
-
 const bills = [124, 48, 268];
 const tips = [tipCalculator(bills[0]),
              tipCalculator(bills[1]),
@@ -230,6 +228,34 @@ const finalValues = [bills[0] + tips[0],
                     bills[1] + tips[1],
                     bills[2] + tips[2]];
 
-
-
 console.log(tips, finalValues);
+
+//Convert C to F function
+
+function calculateYearsToRetirement(yob) {
+  let howLongToRetirement = 2020 - yob;
+  return 67 - howLongToRetirement;
+}
+
+const ageArray = [1982, 1967, 1945, 1995];
+const yearsToRetirementa = [calculateYearsToRetirement(ageArray[0]),
+                           calculateYearsToRetirement(ageArray[1]),
+                           calculateYearsToRetirement(ageArray[2]),
+                           calculateYearsToRetirement(ageArray[3])];
+
+console.log(yearsToRetirementa);
+
+function canIRetire(ageTilRetirement) {
+  if (ageTilRetirement <= 0) {
+    return 'You can already retire';
+  }else {
+    return 'you cannot retire yet';
+  }
+}
+
+const retire = [canIRetire(yearsToRetirementa[0]),
+                canIRetire(yearsToRetirementa[1]),
+                canIRetire(yearsToRetirementa[2]),
+                canIRetire(yearsToRetirementa[3])];
+
+console.log(retire);
