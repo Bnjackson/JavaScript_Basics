@@ -165,3 +165,71 @@ function whatIsYourJob(job, firstName) { //Function Declaration
 console.log(whatIsYourJob('dock worker', 'John'));
 console.log(whatIsYourJob('driver', 'Sarah'));
 console.log(whatIsYourJob('teacher', 'mike'));
+
+
+let names = ['John', 'Mark', 'Jane',];
+let years = new Array(1990, 1969, 1948);
+
+names[1] = 'Ben'; //Mutating 1 position
+names[names.length] = 'Mary';//Adding new element to array length position
+names.push('Dave');//Adds element to end
+names.unshift('Paul');//Adds element to start
+names.pop();//Delete last element
+names.shift();//delete first element
+console.log(names);
+console.log(names.indexOf('Jane'));//Prints position element is in array.
+
+const isNameInArray = names.indexOf('Barry') === -1 ? 'The name Barry is not in the array' : 'The name Barry is in the array';
+console.log(isNameInArray);
+/*
+let tips = [];
+let billTotal = [];
+let bill = [124, 48, 268];
+
+function calculateTip() {
+  if (bill < 50) {
+    tip = bill * (20/100);
+    return tips.push[tip];
+    billTotal = bill + tips;
+  }else if (bill >= 50 && bill <= 200) {
+    let tip = bill * (15/100);
+    return tips.push();
+    billTotal = bill + tips;
+  }else {
+    let tip = bill * (10/100);
+    return tips[0];
+    billTotal = bill + tips;
+  }
+}
+calculateTip();
+console.log(tips);
+console.log(billTotal);
+*/
+
+
+function tipCalculator(bill) {
+  let percentage;
+  if (bill < 50) {
+    percentage = .2;
+    }else if (bill >= 50 && bill < 200) {
+      percentage = .15;
+    }else {
+      percentage = .1;
+    }
+    return percentage * bill;
+}
+
+console.log(tipCalculator(100));
+
+const bills = [124, 48, 268];
+const tips = [tipCalculator(bills[0]),
+             tipCalculator(bills[1]),
+             tipCalculator(bills[2])];
+
+const finalValues = [bills[0] + tips[0],
+                    bills[1] + tips[1],
+                    bills[2] + tips[2]];
+
+
+
+console.log(tips, finalValues);
