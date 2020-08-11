@@ -230,7 +230,6 @@ const finalValues = [bills[0] + tips[0],
 
 console.log(tips, finalValues);
 
-//Convert C to F function
 
 function calculateYearsToRetirement(yob) {
   let howLongToRetirement = 2020 - yob;
@@ -259,3 +258,17 @@ const retire = [canIRetire(yearsToRetirementa[0]),
                 canIRetire(yearsToRetirementa[3])];
 
 console.log(retire);
+
+//Objects an properties
+
+const ben = { // an object
+  firstName:'Ben', //by key 'firstName' value 'ben'
+  lastName:'Jackson', //by key 'lastName' value 'jackson'
+  age:24,//by key 'age' store value 30
+  family: ['Jane', 'Mark', 'Emily'],//Objects can store arrays
+  isMarried: false
+};
+ben.job = 'programmer';
+console.log(ben);
+console.log(ben.firstName);
+console.log(ben['lastName']);
