@@ -312,3 +312,74 @@ function compareBMI() {
 compareBMI();
 
 //const marksBMI = marksWeight / (marksHeight * marksHeight);
+
+
+//Loops Iteration
+
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+/*
+const i = 0;
+while(i < nick.length) {
+  console.log(nick[i]);
+  i++;
+}
+*/
+
+const nick = ['Nick', 'Smith', 1990, 'designer', false];
+for (let i = nick.length - 1; i >= 0; i--) {
+  console.log(nick[i]);
+} //If the element type is different to a string the loop will continue("jump over") one iteration of the loop.
+
+/*const nick = ['Nick', 'Smith', 1990, 'designer', false];
+for (let i = 0; i < nick.length; i++) {
+  if (typeof nick[i] !== 'string') break;
+  console.log(nick[i]);//Will print 'Nick', ' Smith'  */
+
+//if (typeof nick[i] !== 'string') continue;
+
+
+//Coding challenge - Tip calculator
+
+/*
+let tips = [];
+let billTotal = [];
+let bill = [124, 48, 268];
+
+function calculateTip() {
+  if (bill < 50) {
+    tip = bill * (20/100);
+    return tips.push[tip];
+    billTotal = bill + tips;
+  }else if (bill >= 50 && bill <= 200) {
+    let tip = bill * (15/100);
+    return tips.push();
+    billTotal = bill + tips;
+  }else {
+    let tip = bill * (10/100);
+    return tips[0];
+    billTotal = bill + tips;
+  }
+}
+calculateTip();
+console.log(tips);
+console.log(billTotal);
+*/
+
+const billValue = {bill: [124, 48, 268, 180, 42],
+  total: [],
+  tips: [],
+  calculateTip: function() {
+    for (let i = 0; i < this.bill.length; i++) {
+      if (this.bill < 50) {
+        tips = this.bill * (20/100);
+        return tips.push[];
+        total = this.bill + this.tips[0];
+        re
+      }
+    }
+
+  }
+  }
