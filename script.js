@@ -12,7 +12,7 @@ console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married ?
 
 //Variable Mutation - Variable mutation is when you modify a variables original value.
 age = 'twenty eight';//The age variable is mutated from a number to a string.
-
+/*
 let johnAge, markAge, year;
 johnAge = 24;
 markAge = 27;
@@ -47,6 +47,7 @@ if(marksBMI > johnsBMI) {
 //const markHigherBMI = marksBMI > johnsBMI;
 //console.log('Is Mark\'s BMI higher than John\'s?' + ' ' + markHigherBMI);
 
+*/
 const relationshipStatus = 'single';
 
 if(relationshipStatus === 'marriage') {
@@ -272,3 +273,42 @@ ben.job = 'programmer';
 console.log(ben);
 console.log(ben.firstName);
 console.log(ben['lastName']);
+
+const marks = {
+  fullName: 'Mark Noble',
+  marksHeight: 1.88,
+  marksWeight: 88.9,
+  calculateBMI: function() {
+    this.marksBMI = this.marksWeight / (this.marksHeight * this.marksHeight);
+    return this.marksBMI;
+  }
+};
+
+const johns = {
+  fullName: 'John Samuel',
+  johnsHeight: 1.76,
+  johnsWeight: 76,
+  calculateBMI: function() {
+    this.johnsBMI = this.johnsWeight / (this.johnsHeight * this.johnsHeight);
+    return this.johnsBMI;
+  }
+};
+
+marks.calculateBMI();
+johns.calculateBMI();
+console.log(marks);
+console.log(johns);
+
+function compareBMI() {
+  if (marks.marksBMI > johns.johnsBMI) {
+    console.log( marks.fullName + ' BMI is ' + marks.marksBMI + ' ,it is higher than. ' + johns.fullName + ' BMI which is only ' + johns.johnsBMI + '.');
+  } else if (marks.marksBMI < johns.johnsBMI) {
+    console.log('Johns BMI is ' + johns.johnsBMI + ' ,it is higher than. ' + 'Marks BMI which is only ' + marks.marksBMI + '.');
+  } else {
+    console.log('Marks BMI is ' + marks.marksBMI + 'which is the same as johns BMI ' + johns.johnsBMI + '.');
+  }
+}
+
+compareBMI();
+
+//const marksBMI = marksWeight / (marksHeight * marksHeight);
