@@ -368,18 +368,25 @@ console.log(tips);
 console.log(billTotal);
 */
 
-const billValue = {bill: [124, 48, 268, 180, 42],
-  total: [],
-  tips: [],
+const billValue = {
+  bills: [124, 48, 268, 180, 42],
   calculateTip: function() {
-    for (let i = 0; i < this.bill.length; i++) {
-      if (this.bill < 50) {
-        tips = this.bill * (20/100);
-        return tips.push[];
-        total = this.bill + this.tips[0];
-        re
+    this.tips = [];
+    this.finalValues = [];
+    for (let i = 0; i < this.bills.length; i++) {
+      let percentage;
+      let bill = this.bills[i];
+      if (bill < 50) {
+        percentage = .2;
+      }else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+      }else {
+        percentage = .10;
       }
+      this.tips[i] = bill * percentage;
+      this.finalValues[i] = bill + this.tips[i];
     }
-
   }
-  }
+}
+billValue.calculateTip();
+console.log(billValue);
