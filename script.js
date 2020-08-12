@@ -368,7 +368,7 @@ console.log(tips);
 console.log(billTotal);
 */
 
-const billValue = {
+const johnTips = {
   bills: [124, 48, 268, 180, 42],
   calculateTip: function() {
     this.tips = [];
@@ -388,5 +388,41 @@ const billValue = {
     }
   }
 }
-billValue.calculateTip();
-console.log(billValue);
+
+const adamTips = {
+  bills: [77, 475, 110, 45],
+  calculateTip: function() {
+    this.tips = [];
+    this.finalValues = [];
+    for (let i = 0; i < this.bills.length; i++) {
+      let percentage;
+      let bill = this.bills[i];
+      if (bill < 100) {
+        percentage = .2;
+      }else if (bill >= 100 && bill < 300) {
+        percentage = .10;
+      }else {
+        percentage = .25;
+      }
+      this.tips[i] = bill * percentage;
+      this.finalValues[i] = bill + this.tips[i];
+    }
+  }
+}
+
+const calcTipAverage = function(tips) {
+  let sum = 0;
+  for (let i = 0; i < tips.length; i++) {
+    sum = sum + tips[i];
+  }
+  return sum / tips.length;
+}
+
+adamTips.calculateTip();
+johnTips.calculateTip();
+console.log(adamTips, johnTips);
+
+let tipAverage;
+
+
+console.log(tipAverage);
