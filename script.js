@@ -368,6 +368,8 @@ console.log(tips);
 console.log(billTotal);
 */
 
+//Challenge 5
+
 const johnTips = {
   bills: [124, 48, 268, 180, 42],
   calculateTip: function() {
@@ -418,11 +420,16 @@ const calcTipAverage = function(tips) {
   return sum / tips.length;
 }
 
+
 adamTips.calculateTip();
 johnTips.calculateTip();
 console.log(adamTips, johnTips);
 
-let tipAverage;
+adamTips.average = calcTipAverage(adamTips.tips);
+johnTips.average = calcTipAverage(johnTips.tips);
 
-
-console.log(tipAverage);
+if (adamTips.average > johnTips.average) {
+  console.log('Adam tips ' + adamTips.average + ' which is more than John. Who tips ' + johnTips.average + '.');
+}else {
+  console.log('John tips ' + johnTips.average + ' which is more than Adam. Who tips ' + johnTips.average + '.');
+}
