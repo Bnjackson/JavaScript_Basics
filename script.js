@@ -442,9 +442,10 @@ function calculateAge(year) {
   console.log(2020 - year);
 }
 
-
-
-
-//variables
+function foo() {
+  let ageVariable = 65;
+  console.log(ageVariable);
+}
+foo();
 console.log(ageVariable);
-let ageVariable = 23;
+//variables
