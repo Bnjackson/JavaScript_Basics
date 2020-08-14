@@ -433,3 +433,18 @@ if (adamTips.average > johnTips.average) {
 }else {
   console.log('John tips ' + johnTips.average + ' which is more than Adam. Who tips ' + johnTips.average + '.');
 }
+
+//Hoisting
+
+//Function
+calculateAge(1975);
+function calculateAge(year) {
+  console.log(2020 - year);
+}
+
+
+
+
+//variables
+console.log(ageVariable);
+let ageVariable = 23;
