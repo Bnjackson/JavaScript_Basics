@@ -447,5 +447,30 @@ function foo() {
   console.log(ageVariable);
 }
 foo();
-console.log(ageVariable);
 //variables
+
+//console.log(this);
+calcAge(1985);
+function calcAge(year) {
+  console.log(2020 - year);
+  console.log(this);
+}
+
+let matthew = {
+  name: 'matthew',
+  yearOfBirth: 1990,
+  calcAge: function() {
+    console.log(this);
+    console.log(2020 - this.yearOfBirth)
+  }
+}
+matthew.calcAge();
+
+let mike = {
+  name: 'mike',
+  yearOfBirth: 1984
+}
+
+
+mike.calcAge = matthew.calcAge;
+mike.calcAge();
